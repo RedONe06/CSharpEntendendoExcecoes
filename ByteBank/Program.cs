@@ -10,6 +10,17 @@ namespace ByteBank
     {
         static void Main(string[] args)
         {
+            try 
+            { 
+                ContaCorrente conta = new ContaCorrente(0,0);
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine($"Erro no parâmetro: {ex.ParamName}");
+                Console.WriteLine("Ocorreu um tipo de ArgumentException");
+                Console.WriteLine(ex.Message);
+            }
+            
             try
             {
                 Metodo();
@@ -25,7 +36,7 @@ namespace ByteBank
         }
         private static void Metodo()
         {
-                TestaDivisao(0); 
+                TestaDivisao(2); 
         }
 
         private static void TestaDivisao(int divisor)
