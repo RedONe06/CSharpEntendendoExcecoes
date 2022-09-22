@@ -16,3 +16,10 @@
 - O bloco try pode acompanhar vários blocos catch;
 - A CLR visita os blocos catch em ordem, de cima para baixo. Por essa razão, os tipos de exceção mais específicos devem estar no começo;
 - A instrução throw;, dentro de um bloco catch, relança uma exceção.
+
+### ArgumentException
+
+- Campos somente leitura com o modificador readonly, que irão nos ajudar a manter a segurança do nosso código evitando que dados que não devem ser modificados, sejam alterados sem necessidade;
+- Propriedades somente leitura, com omissão do setter, impedindo que a informação seja alterada ao longo da aplicação;
+- O operador nameof() produz o nome de uma variável, tipo ou membro como a constante de cadeia de caracteres;
+- A classe de exceção ArgumentException, seus construtores e propriedades.
