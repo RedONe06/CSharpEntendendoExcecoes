@@ -28,3 +28,9 @@
 
 - Convenções de nomeação de exceções utilizando o Exception ao final;
 - Como criar nossas exceções quando for necessário e não tivermos tais opções disponibilizadas pelo próprio CSharp.
+
+### StackTrace e InnerException
+
+- Como a CLR preenche a propriedade StackTrace;
+- A estrutura InnerExceptions nos ajuda a deixar nossas exceções ainda mais claras, facilitando o trabalho da pessoa desenvolvedora;
+- O terceiro construtor que as exceções devem ter: (string mensagem, Exception excecaoInterna), tornando nossa exceção ainda mais rica.
