@@ -23,3 +23,8 @@
 - Propriedades somente leitura, com omissão do setter, impedindo que a informação seja alterada ao longo da aplicação;
 - O operador nameof() produz o nome de uma variável, tipo ou membro como a constante de cadeia de caracteres;
 - A classe de exceção ArgumentException, seus construtores e propriedades.
+
+### Criando exceções ricas
+
+- Convenções de nomeação de exceções utilizando o Exception ao final;
+- Como criar nossas exceções quando for necessário e não tivermos tais opções disponibilizadas pelo próprio CSharp.
