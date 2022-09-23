@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 
 namespace ByteBank
 {
@@ -8,15 +9,10 @@ namespace ByteBank
         {   
             try
             {
-                ContaCorrente conta1 = new ContaCorrente(234,1231);
-                ContaCorrente conta2 = new ContaCorrente(2342,1231);
-
-                conta1.Depositar(50);
-                Console.WriteLine(conta1.Saldo);
-                conta1.Transferir(500, conta2);
-                Console.WriteLine(conta1.Saldo);
-
+                CarregarContas();
                 Metodo();
+                Console.ReadLine();
+
             } 
             catch (ArgumentException ex)
             {
@@ -47,8 +43,6 @@ namespace ByteBank
                 Console.Write(exception.StackTrace);
 
             }
-
-            Console.ReadLine();
         }
         private static void Metodo()
         {
@@ -72,6 +66,29 @@ namespace ByteBank
                 Console.WriteLine($"Exceção com número = {numero} e divisor = {divisor}");
                 throw;
             }
+        }
+
+        private static void CarregarContas()
+        {
+            LeitorDeArquivo leitor = new LeitorDeArquivo("contas.txt");
+            try
+            {
+                
+                leitor.LerProximaLinha();
+                leitor.LerProximaLinha();
+                leitor.LerProximaLinha();
+
+                leitor.Fechar();
+
+            } catch(IOException ex)
+            {
+                Console.WriteLine("Exceção do tipo IOException capturada e tratada!");
+            }
+            finally
+            {
+                leitor.Fechar();
+            }
+            
         }
     }
 }
