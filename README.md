@@ -34,3 +34,9 @@
 - Como a CLR preenche a propriedade StackTrace;
 - A estrutura InnerExceptions nos ajuda a deixar nossas exceções ainda mais claras, facilitando o trabalho da pessoa desenvolvedora;
 - O terceiro construtor que as exceções devem ter: (string mensagem, Exception excecaoInterna), tornando nossa exceção ainda mais rica.
+
+### Bloco finally
+
+- O bloco finally servirá para garantir que um código seja executado depois do blocotry;
+- Não é obrigatório o bloco catch quando temos um finally;
+- O bloco using é usado para garantir a disposição correta de alguns objetos.
